@@ -1,12 +1,12 @@
 package java.lessons.org.prodotto2;
 
-public class Televisore extends Prodotto {
+public class Televisori extends Prodotto {
 	
 	private String tvSize;
 	private Boolean smartTv;
 	
 	
-	public Televisore(String nome, String marca, double prezzo, String tvSize, Boolean smartTv) {
+	public Televisori(String nome, String marca, double prezzo, String tvSize, Boolean smartTv) {
 		super(nome, marca, prezzo);
 		this.tvSize = tvSize;
 		this.smartTv = smartTv;
@@ -28,5 +28,11 @@ public class Televisore extends Prodotto {
 		this.smartTv = smartTv;
 	}
 	
-	
+	@Override
+	public String toString() {
+	  return super.toString() + 
+	         ", Size = " + this.getTvSize() +
+	         ", is Smart = " + (this.isSmartTv() ? "yes":"no");
+	}
 }
+

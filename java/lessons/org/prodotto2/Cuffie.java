@@ -18,14 +18,20 @@ public class Cuffie extends Prodotto {
 		this.coloreCuffie = coloreCuffie;
 	}
 	
-	public boolean getCuffieWireless() {
+	public boolean isCuffieWireless() {
 		return cuffieWireless;
 	}
 	
-	public void setCuffieWireless(Boolean cuffiewireless) {
+	public void setCuffieWireless(Boolean cuffieWireless) {
 		this.cuffieWireless = cuffieWireless;
 	}
 	
+	@Override
+	public String toString() {
+	  return super.toString() + 
+	         ", Colore = " + this.getColore() +
+	         ", is wireless? = " + (this.isCuffieWireless()?"yes":"no");
+	}
 	
 	
 }

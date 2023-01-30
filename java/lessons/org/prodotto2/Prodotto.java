@@ -49,10 +49,24 @@ public class Prodotto {
 		return this.iva;
 	}
 	
-	public void setIva(float iva) {
-		this.iva = iva;
-	}
 	
 	public double prezzoFinale() {
 		return this.prezzo * ( this.iva/100 + this.prezzo );
 	}
+	
+	
+	@Override
+	public String toString() {
+	  return "Informazioni sul prodotto: " +
+	         "Codice = " + this.getCodiceIdentificativo() +
+	         ", Nome = " + this.getNome() +
+	         ", Marca = " + this.getMarca() +
+	         ", Prezzo = " + this.getPrezzo() + "€" +
+	         ", IVA = " + this.prezzoFinale() + "€";
+	}
+
+	
+	
+	
+	
+}

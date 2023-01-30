@@ -23,8 +23,14 @@ public class Smarthphone extends Prodotto {
 			return this.memory;
 		}
 		
-		public void setMemory() {
+		public void setMemory(int memory) {
 			this.memory = memory;
 		}
 		
+		@Override
+		public String toString() {
+		  return super.toString() + 
+		         ", IMEI = " + this.getMobile() +
+		         ", Memoria in MB = " + this.getMemory();
+		}
 }
